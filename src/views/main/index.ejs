@@ -1,5 +1,104 @@
 <%- include('../partials/header.ejs') %>
 
-    <h1>hola mundo</h1>
+    <div class="buttonListProduct">
+        <button onclick="location.href='/products'">Formulario de Creación</button>
+    </div>
+    
+    <div class="table-responsive">
+        <table class="table-product-car table table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" style="text-align: center;">Foto de Perfil</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido </th>
+                    <th scope="col">Email</th>
 
-<%- include('../partials/footer.ejs') %>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row1" style="width: 50%;"><img src="/images/iroman.jpg" alt=" image"
+                            class="iroman-img"></i></a></td>
+                    <td class="name">Tony</td>
+                    <td class="surname">Stark</td>
+                    <td class="mail">iroman@gmail.com</td>
+                </tr>
+
+
+                <tr>
+                    <td scope="row1" style="width: 50%;"><img src="/images/Capitan america(2).jpg" alt="Capitan América"
+                            class="Capitan América"></i></a></td>
+                    <td class="name">Steven</td>
+                    <td class="surname">Grant Rogers</td>
+                    <td class="mail">capitanamérica@gmail.com</td>
+
+
+                </tr>
+
+                <tr>
+                    <td scope="row1" style="width: 50%;"><img src="/images/Thor(1).jpg" alt="Thor" class="Thor"></i></a>
+                    </td>
+                    <td class="name">Thor </td>
+                    <td class="surname">Odinson</td>
+                    <td class="mail">thor@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td scope="row1" style="width: 50%;"><img src="/images/hulk (3).jpg" alt="Hulk"
+                            class="Hulk"></i></a></td>
+                    <td class="name">Bruce</td>
+                    <td class="surname">Banner</td>
+                    <td class="mail">hulk@gmail.com</td>
+
+                </tr>
+
+                <tr>
+                    <td scope="row1" style="width: 50%;"><img src="/images/spiderman (3).jpg" alt="Spiderman"
+                            class="Spiderman"></i></a></td>
+                    <td class="name">Peter </td>
+                    <td class="surname">Parker</td>
+                    <td class="mail">spiderman@gmail.com</td>
+                </tr>
+
+
+                <tr>
+                    <td scope="row1" style="width: 50%;"><img src="/images/Black widor(1).jpg" alt="Black Widow"
+                            class="Black Widow"></i></a></td>
+                    <td class="name">Natalia</td>
+                    <td class="surname">Alianovna Romanova</td>
+                    <td class="mail">blackwidow@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td scope="row1" style="width: 50%;"><img src="/images/Dr (2).jpg" alt="Dr Strange"
+                            class="Dr Strange"></i></a></td>
+                    <td class="name">Stephen</td>
+                    <td class="surname">Strange</td>
+                    <td class="mail">drstrange@gmail.com</td>
+
+                </tr>
+
+                <tr>
+                    <td scope="row1" style="width: 50%;"><img src="/images/wanda(4).jpg" alt="Wanda"
+                            class="Wanda"></i></a></td>
+                    <td class="name">Wanda</td>
+                    <td class="surname">Maximoff </td>
+                    <td class="mail">scarletwitch@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td scope="row1" style="width: 50%;"><img src="/images/Vision (1).jpg" alt="Visión"
+                            class="Visión"></i></a></td>
+                    <td class="name">Visión</td>
+                    <td class="surname">Ultrón</td>
+                    <td class="mail">vision@gmail.com</td>
+                </tr>
+        </table>
+
+    </div>
+    <div style="padding: 0px 30%;text-align-last: center;">
+        <button class="carro-button" onclick=" alert('Compra Finalizada'); location.href='/'">Finalizar la
+            Compra</button>
+    </div>
+
+    <%- include('../partials/footer.ejs') %>
