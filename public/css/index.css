@@ -64,7 +64,20 @@
 .burger{
     display: none;
     cursor: pointer;
+
 }
+
+.body{
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+
+.img-perfil{
+    width: 90%;
+}
+
+
+
 
 .burger div{
     width: 25px;
@@ -126,6 +139,16 @@
     transform: translateX(0%);
 }
 
+.table-responsive {
+    margin: 1%;
+    width: 300%;
+    height: 300%;
+    color: #663300;
+}
+
+.table-product-car{
+    width: 30%;
+}
 
 footer{
     background-color:  #ff8000;
@@ -214,4 +237,37 @@ ul{
     justify-content: center;
     text-align: center;
     color: white
+}
+
+.caja-register input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    background-color: #f8f5f2;
+}
+
+.caja-register input::placeholder {
+    color: #a1500d;
+  }
+
+
+button {
+    background-color: #ffb100;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 70%;
 }

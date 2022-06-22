@@ -1,7 +1,7 @@
 <%- include('../partials/header.ejs') %>
    
     <div class="table-responsive">
-        <table class="table-product-car table table table-hover">
+        <table class="table-product-car">
             <thead>
                 <tr>
                     <th scope="col" style="text-align: center;">Foto de Perfil</th>
@@ -16,7 +16,7 @@
                 <%  users.forEach(user => { %>
                 <tr>
                     <td scope="row1" style="width: 50%;"><img src="/images/<%= user.image %>" alt=" image"
-                            class="iroman-img"></i></a></td>
+                            class="img-perfil"></i></a></td>
                     <td class="name"><%= user.name %></td>
                     <td class="surname"><%= user.lastname %></td>
                     <td class="mail"><%= user.email %></td>
@@ -29,6 +29,7 @@
                     </td>
                 </tr>
                 <% }) %>
+            </tbody>
 
             
         </table>

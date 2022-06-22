@@ -1,6 +1,9 @@
 <%- include('../partials/header.ejs') %>
 <section>
-    <div>
+            <div class="buttonUser">
+                <button onclick="location.href='/'">Volver a listado de usuarios</button>
+            </div>
+       
         <form action="/addUser" method="POST" enctype="multipart/form-data">
             <div class="caja-register">
                 <h1 class="register-title">Crear Usuario</h1>
@@ -28,9 +31,6 @@
                                 <%= errors.password.msg %>  
                          
                                <% } %>
-                            <div class="eyelash-slash">
-                                <i class="far fa-eye-slash"></i>
-                            </div>
                         </div>
                         <div class="container-confirmPassword">
                             <label for="confirmPassword"></label>
@@ -55,13 +55,12 @@
                             <%= errors.image.msg %>  
                      
                            <% } %>
+                           <div class="container-button">
+                            <button type="submit">
+                                <span class="text">Crear</span>
                     </div>
                 </div>
-                <div class="container-button">
-                    <button type="submit">
-                        <span class="text">Crear</span>
-                    </button>
-                </div>
+                
             </form>
         </div>
    
