@@ -1,6 +1,10 @@
+const db = require('./../../database/models');
+
 const mainController = {
-  main: (req,res) => {
-    res.render('./main/index')
+  main: async (req,res) => {
+    const users = await db.User.findAll();
+    console.log('users', users);
+    res.render('./main/index', {users})
   }
 }
 

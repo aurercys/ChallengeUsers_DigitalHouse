@@ -52,7 +52,7 @@ app.listen(process.env.PORT || 3005, (err) => {
         console.log('Levantó el Server correctamente en el puerto 3005')
     }
 })
-// const db = require('./database/models');
+const db = require('./database/models');
 
 module.exports = app;
 
