@@ -29,18 +29,7 @@
                 </div>
                 
                 <ul class="nav-bar">
-                    <% if (locals.isLogged) { %>
-                    <img src="/images/users/<%= locals.userLogged.image %>" width="50" style="border-radius: 100%" alt="User img">
-                    <li><a href="/">Usuarios</a></li>
-                    <li><a href="/products">Agregar usuarios</a></li>
-                        <li> <a href="/users/userProfile">Hola <%= locals.userLogged.name %></a> </li>
-                        <li><a href="/users/logout">Logout</a></li>
-                    <% } else { %>
-                        <li><a href="/">Usuarios</a></li>
-                        <li><a href="/products">Agregar usuarios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/users/login">Editar usuarios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/users/register">Eliminar usuarios</a></li>
-                    <% } %>
+                    <li><a href="/addUser">Agregar usuarios</a></li>
                   
                    
                     
