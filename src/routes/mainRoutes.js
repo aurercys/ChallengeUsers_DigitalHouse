@@ -10,5 +10,7 @@ router.get ('/addUser', mainController.addUser)
 router.post ('/addUser', upload.single('image'), usersValidation, mainController.create)
 router.get ('/editUser/:id', mainController.editUser)
 router.put('/editUser/:id', upload.single('image'), usersValidation, mainController.update);
+router.get ('/detailUser/:id/', mainController.detail)
+router.delete('/deleteUser/:id', mainController.delete);
 
 module.exports = router;

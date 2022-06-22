@@ -1,0 +1,29 @@
+<%- include('../partials/header.ejs') %>
+<section>
+    <div>
+        <div class="caja-register">
+            
+            <div class="container-img">
+                <img src="/images/<%=user.image %>" alt="user image" class="">
+            </div>
+
+            <div class="container-name">
+                <label for="name"></label>
+                <input type="text" name="name" id="name" disabled value="<%= user.name%>">
+    
+            </div>
+            <div class="container-lastname">
+                <label for="lastname"></label>
+                <input type="text" name="lastname" id="lastname" disabled value="<%= user.lastname %>">
+            </div>
+    
+            <div class="container-email">
+                <label for="email"></label>
+                <input type="email" name="email" id="email" disabled value=" <%= user.email %>">
+            </div>
+        </div>
+    </div>
+   
+    </article>
+</section>
+<%- include('../partials/footer.ejs') %>

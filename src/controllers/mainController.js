@@ -106,7 +106,21 @@ const mainController = {
   });
 
     return res.redirect("/");
-  }
+  },
+  detail: (req,res) => {
+    db.User.findByPk(req.params.id)
+      .then(user => {
+          res.render('./main/detailUser', { user });
+      });
+  },
+  delete: (req, res) => {
+    let userId = req.params.id;
+    db.User
+    .destroy({where: {id: userId}, force: true}) // force: true es para asegurar que se ejecute la acción
+    .then(()=>{
+        return res.redirect('/')})
+    .catch(error => res.send(error)) 
+	}
 }
 
 module.exports = mainController;

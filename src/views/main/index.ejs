@@ -21,9 +21,11 @@
                     <td class="surname"><%= user.lastname %></td>
                     <td class="mail"><%= user.email %></td>
                     <td class="acctions">
-                        <a href="/products/detailProduct/<%= user.id %>">Ver Detalle</a><br>
+                        <a href="/detailUser/<%= user.id %>">Ver Detalle</a><br>
                         <a href="/editUser/<%= user.id %>">Editar</a><br>
-                        <a href="/products/detailProduct/<%= user.id %>">Elminar</a>
+                        <form action="/deleteUser/<%= user.id %>?_method=DELETE" method="POST">
+                            <a href="javascript:{}" onclick="this.closest('form').submit();return false;">Eliminar</a>
+                        </form>
                     </td>
                 </tr>
                 <% }) %>
