@@ -8,5 +8,7 @@ const usersValidation = require (path.resolve('./middlewares/usersValidation'))
 router.get ('/', mainController.main);
 router.get ('/addUser', mainController.addUser)
 router.post ('/addUser', upload.single('image'), usersValidation, mainController.create)
+router.get ('/editUser/:id', mainController.editUser)
+router.put('/editUser/:id', upload.single('image'), usersValidation, mainController.update);
 
 module.exports = router;

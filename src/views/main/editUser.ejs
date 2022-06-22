@@ -1,0 +1,71 @@
+<%- include('../partials/header.ejs') %>
+<section>
+    <div>
+        <form action="/editUser/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="caja-register">
+                <h1 class="register-title">Editar Usuario</h1>
+                <div class="container-name">
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name" placeholder="Ingresá tu nombre" value="<%= locals.old && old.name || user.name%>">
+                    <% if ( locals.errors && locals.errors.name ) { %>
+                        <%= errors.name.msg %>  
+                 
+                       <% } %>
+                </div>
+                <div class="container-lastname">
+                    <label for="lastname"></label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Ingresá tu apellido" value="<%= locals.old && old.lastname || user.lastname %>">
+                    <% if ( locals.errors && locals.errors.lastname ) { %>
+                        <%= errors.lastname.msg %>  
+                 
+                       <% } %>
+                </div>
+               
+                 <div class="container-password">
+                            <label for="password"></label>
+                            <input type="password" name="password" id="password" placeholder="Ingresá tu contraseña" >
+                            <% if ( locals.errors && locals.errors.password ) { %>
+                                <%= errors.password.msg %>  
+                         
+                               <% } %>
+                            <div class="eyelash-slash">
+                                <i class="far fa-eye-slash"></i>
+                            </div>
+                        </div>
+                        <div class="container-confirmPassword">
+                            <label for="confirmPassword"></label>
+                            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Ingresá nuevamente tu contraseña">
+                            <% if ( locals.errors && locals.errors.confirmPassword ) { %>
+                                <%= errors.confirmPassword.msg %>  
+                         
+                               <% } %>
+                        </div>
+                    <div class="container-email">
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="Ingresá tu email" value=" <%= locals.old && old.email || user.email %>">
+                        <input type="hidden" name="emailOriginal" id="emailOriginal" value="<%= user.emailOriginal %>">
+                        <% if ( locals.errors && locals.errors.email ) { %>
+                            <%= errors.email.msg %>  
+                     
+                           <% } %>   
+                    </div>
+                    <div class="container-avatar">
+                        <label for="image"></label>
+                        <input type="file" name="image" id="image" placeholder="Subí tu foto de perfil">
+                        <% if ( locals.errors && locals.errors.image ) { %>
+                            <%= errors.image.msg %>  
+                     
+                           <% } %>
+                    </div>
+                </div>
+                <div class="container-button">
+                    <button type="submit">
+                        <span class="text">Editar</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+   
+    </article>
+</section>
+<%- include('../partials/footer.ejs') %>
